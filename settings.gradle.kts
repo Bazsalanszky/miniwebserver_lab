@@ -1,0 +1,1 @@
+rootProject.name = "eu.toldi.miniwebserver_lab"
