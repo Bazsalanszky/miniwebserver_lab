@@ -1,0 +1,8 @@
+kind: pipeline
+type: docker
+
+steps:
+- name: gradleBuild
+  image: gradle:7.0.1-jdk8
+  commands:
+  - ./gradlew build
