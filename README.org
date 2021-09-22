@@ -1,0 +1,30 @@
+#+TITLE: Miniwebszerver - Témalabor
+#+AUTHOR: Balazs Toldi
+
+* Leírás
+Ez egy egyszerű web szerver alkalmazás, amit Témalaboratórium háziként írtam. 3
+elérési útvonalat támogat:
+1) =/=: Egy egyszerű statikus =Hello world= oldal
+2) =/hello=: Egy oldal, ami a =name= =GET= paraméterén keresztül megadott néven
+   köszön. Ha nincs ilyen megadva akkor =stranger= néven köszönt
+3) =/sum=: Kiírja az =a= és =b= =GET= paraméter összegét. Ha nincs megadva az
+   adott paraméter, akkor azt =0=-nak veszi.
+* Futtatás
+A szerver futtatható önmagában vagy docker konténeren belül is.
+** Futtatás önmagában
+Az alábbi parancs lefordítja a programot, majd futtatja azt
+#+BEGIN_SRC sh
+./gradlew build run
+#+END_SRC
+
+** Futtatás docker konténerben
+Az alábbi parancsal lehet lefordítani a programot,majd létrehoz egy docker image-t.
+#+BEGIN_SRC sh
+./gradlew build docker
+#+END_SRC
+
+Ez után a konténert az alábbi parancsal lehet elindítani:
+#+BEGIN_SRC sh
+docker run eu.toldi.miniwebserver_lab:0.0.1
+#+END_SRC
+
