@@ -25,6 +25,5 @@ Az alábbi parancsal lehet lefordítani a programot,majd létrehoz egy docker im
 
 Ez után a konténert az alábbi parancsal lehet elindítani:
 #+BEGIN_SRC sh
-docker run eu.toldi.miniwebserver_lab:0.0.1
+docker run -d -p 8080:8080 eu.toldi.miniwebserver_lab:0.0.1
 #+END_SRC
-
